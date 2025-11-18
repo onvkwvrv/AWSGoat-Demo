@@ -55,6 +55,10 @@ jobs:
         echo "A Previous AWSGoat deployment exists, run the Terraform Destroy Action"
         exit 1
 
+    #Tag the resources
+    - name: Run yor action
+      uses: bridgecrewio/yor-action@main
+
     # Initialize a new or existing Terraform working directory 
     - name: Terraform Init
       run: | 
