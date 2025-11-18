@@ -58,6 +58,9 @@ jobs:
     #Tag the resources
     - name: Run yor action
       uses: bridgecrewio/yor-action@main
+      with: 
+        directory: modules/${{ github.event.inputs.module }}
+        
 
     # Initialize a new or existing Terraform working directory 
     - name: Terraform Init
